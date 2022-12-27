@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9da110963da04d62828db145a07fe7ff" Name="Diagram1">
+        <EntityTypeShape EntityType="prog15Model.Phone" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="prog15Model.PhoneType" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="prog15Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="prog15Model.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="prog15Model.UserType" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="prog15Model.FK_Phone_PhoneType" ManuallyRouted="false" />
+        <AssociationConnector Association="prog15Model.FK_User_UserType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="prog15Model.Client" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="prog15Model.Request" Width="1.5" PointX="3" PointY="8.75" />
+        <EntityTypeShape EntityType="prog15Model.RequestPhones" Width="1.5" PointX="5.25" PointY="7" />
+        <EntityTypeShape EntityType="prog15Model.RequestStatus" Width="1.5" PointX="7.375" PointY="3.75" />
+        <AssociationConnector Association="prog15Model.FK_Request_Client" />
+        <AssociationConnector Association="prog15Model.FK_RequestPhones_Phone" />
+        <AssociationConnector Association="prog15Model.FK_RequestPhones_Request" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -12,18 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExamCore;
 
-namespace Exam27._12._2022
+namespace Exam27._12._2022.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddClientPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddClientPage : Page
     {
-        public MainWindow()
+        public Client Client { get; set; }
+        public AddClientPage()
         {
             InitializeComponent();
-            mainFrame.NavigationService.Navigate(new Pages.AuthPage());
+            Client= new Client();
+            DataContext = Client;
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            DbAccess.SaveClient(Client);
         }
     }
 }
